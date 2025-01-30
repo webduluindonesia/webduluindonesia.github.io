@@ -64,3 +64,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+gsap.from(".why-item", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2, // Delay antar elemen
+    ease: "power3.out",
+});
+
+// Animasi hover untuk efek interaktif
+document.querySelectorAll(".why-item").forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+        gsap.to(item, { scale: 1.05, duration: 0.3 });
+    });
+    item.addEventListener("mouseleave", () => {
+        gsap.to(item, { scale: 1, duration: 0.3 });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".feature-box");
+
+    function revealOnScroll() {
+        boxes.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+            if (boxTop < window.innerHeight - 50) {
+                box.style.opacity = "1";
+                box.style.transform = "translateY(0)";
+                box.style.transition = "all 0.6s ease-out";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Run once in case elements are already in view
+});
+

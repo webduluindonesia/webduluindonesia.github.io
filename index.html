@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 </head>
 <body>
@@ -145,6 +147,7 @@
                         <div class="step-number">1</div>
                         <h3>Konsultasi</h3>
                         <p>Kami mulai dengan mendengarkan kebutuhan dan tujuan bisnis Anda. Di tahap ini, Anda dapat berbagi ide dan visi untuk website Anda, sehingga kami bisa memberikan rekomendasi terbaik.</p>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="order-step">
@@ -177,7 +180,8 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <section id="faqs">
             <div class="container">
@@ -250,24 +254,85 @@
 
     <section id="contact"> 
         <div class="container">
-            <h2>Hubungi Kami</h2>
-            <form action="contactForm.php" method="POST" target="_blank">
-                <p>Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut atau konsultasi gratis.</p>
-                <input type="text" placeholder="Nama Anda">
-                <input type="email" placeholder="Email Anda">
-                <textarea placeholder="Pesan Anda"></textarea>
-                <button type="submit">Kirim Pesan</button>
+            <h2>Buat Website Sekarang !</h2>
+            <form action="contactform.php" method="post" target="_blank">
+                <p>Dapatkan penawaran eksklusif dengan <span style="font-weight: 700; color: #003366;">diskon hingga 30%</span> untuk pemesanan pertama Anda! Kontak kami sekarang dan mulai perjalanan digital bisnis Anda.</p>
+                
+                <label for="kategori">Saya tertarik dengan..</label>
+                <select name="kategori" id="kategori" required>
+                    <option disabled selected>Pilih..</option>
+                    <option value="scratch">Website dari 0</option>
+                    <option value="redesign">Website Redesign</option>
+                    <option value="figmaDesign">Figma Design (UI/UX)</option>
+                </select>
+            
+                <label for="nama">Nama Anda</label>
+                <input type="text" id="nama" name="nama" placeholder="Best Developer" required>
+            
+                <label for="email">Email Anda</label>
+                <input type="email" id="email" name="email" placeholder="dev@gmail.com" required>
+            
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" placeholder="Saya ingin membuat website!" required></textarea>
+            
+                <label for="budget">Project Budget (IDR)</label>
+                <select name="budget" id="budget" required>
+                    <option disabled selected>Pilih..</option>
+                    <option value="price1">Paket Starter (Landing page/Web Portfolio) - Mulai Dari Rp 999.000</option>
+                    <option value="price2">Paket Basic - Mulai Dari Rp 2.500.000</option>
+                    <option value="price3">Paket Premium - Mulai Dari Rp 4.999.000</option>
+                    <option value="price4">Paket E-commerce Hemat - Mulai Dari Rp 6.999.000</option>
+                    <option value="price4">Paket IoT Web - Mulai Dari Rp 11.999.000</option>
+                    <option value="price5">Paket Pemeliharaan Website - Mulai Dari Rp 350.000/bulan</option>
+                </select>
+            
+                <button type="submit">Submit</button>
+            
+                <p>
+                    Kami menghargai privasi Anda. Semua informasi yang Anda berikan akan kami jaga kerahasiaannya dan hanya digunakan untuk keperluan yang berkaitan dengan layanan kami. Data Anda aman bersama kami.
+                </p>
             </form>
+            
         </div>
     </section>
 
-
+    <div class="container">
+        <h2>Mengapa <span style="font-weight: 700; color: #003366;">Memilih Kami?</span></h2>
+        <div class="comparison">
+            <div class="column">
+                <h3><i class="fa-solid fa-star"></i> Webdulu Indonesia</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check check"></i> Sangat fokus memahami kebutuhan UMKM</li>
+                    <li><i class="fa-solid fa-check check"></i> Harga terjangkau, kualitas tinggi</li>
+                    <li><i class="fa-solid fa-check check"></i> Desain trendy & profesional</li>
+                    <li><i class="fa-solid fa-check check"></i> Fast respon & Gratis konsultasi</li>
+                    <li><i class="fa-solid fa-check check"></i> Menerima kustomisasi</li>
+                    <li><i class="fa-solid fa-check check"></i> Komunikatif dengan client</li>
+                    <li><i class="fa-solid fa-check check"></i> Jaminan keamanan data</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3><i class="fa-solid fa-times cross"></i> Other Agencies</h3>
+                <ul>
+                    <li><i class="fa-solid fa-times cross"></i> Tidak terfokus</li>
+                    <li><i class="fa-solid fa-times cross"></i> Harga tinggi, kurang berkualitas</li>
+                    <li><i class="fa-solid fa-times cross"></i> Desain tidak profesional</li>
+                    <li><i class="fa-solid fa-times cross"></i> Lambat & Konsultasi berbayar</li>
+                    <li><i class="fa-solid fa-times cross"></i> Tidak bisa kustom</li>
+                    <li><i class="fa-solid fa-times cross"></i> Menghilang</li>
+                    <li><i class="fa-solid fa-times cross"></i> Data tidak aman</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
     <footer class="footer">
         <p>&copy; Copyright 2025 - Webdulu Indonesia . Alright Reserved. <br><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat & Ketentuan</a></p>
     </footer>
 
-    
 
+    <!-- Link GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
