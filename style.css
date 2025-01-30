@@ -1,0 +1,551 @@
+/* Reset CSS untuk menghilangkan style default browser */
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 2.3rem;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.span{
+    font-weight: 700;
+    color: #003366;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #fff, #333);
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-image: radial-gradient(#eaeaea 20%, transparent 20%);
+    background-size: 10px 10px; /* Atur ukuran pola */
+    background-attachment: fixed; /* Efek paralaks */
+    background-position: center; /* Pusatkan pola */
+    background-repeat: repeat; /* Ulangi pola secara seamless */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Mencegah spasi kosong di bawah gambar */
+}
+
+/* Container untuk membatasi lebar konten */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding kiri dan kanan */
+}
+
+/* Hero Section */
+#hero {
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    padding: 180px 0;
+    position: relative; /* Untuk overlay */
+}
+
+#hero::before { /* Overlay gelap */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Agar konten di atas overlay */
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    font-size: 1.1rem;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #003366;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* About Section */
+#about {
+    text-align: justify;
+    padding-top: 200px;
+    padding-bottom: 250px;
+    margin: 0 200px;
+}
+
+#about p {
+    margin-top: -20px;
+    font-size: 1.2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.about-item {
+    text-align: center;
+}
+
+.about-item img {
+    max-width: 100px;
+    margin: 0 auto 20px;
+}
+
+/* Services Section */
+#services {
+    padding: 80px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.service {
+    background-color: white;
+    padding: 30px; /* Tambahkan padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Efek melayang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.service h3{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #003366;
+}
+.service p {
+text-align: justify;
+margin: 0 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    padding-bottom: 150px;
+}
+#contact h2{
+    padding-bottom: 20px;
+}
+#contact form {
+    display: grid;
+    grid-gap: 20px;
+    margin: 0 150px;
+}
+#contact form p {
+    text-align: center;
+}
+#contact input,
+#contact textarea {
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; 
+    
+}
+#contact textarea {
+    min-height: 150px;
+    resize: vertical; 
+}
+#contact button {
+    padding: 15px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #333;
+}
+
+
+/* Footer */
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+.footer a:hover{
+    color: #003366;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.portfolio-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Mencegah gambar keluar dari container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px; /* Tinggi tetap untuk gambar */
+    object-fit: cover; /* Memastikan gambar mengisi container dengan proporsi yang benar */
+}
+
+.portfolio-item h3, .portfolio-item p {
+    padding: 10px;
+}
+
+.portfolio-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+.portfolio-link:hover {
+    background-color: #0056b3;
+}
+
+/* How to Order Section */
+#how-to-order {
+    padding: 80px 0;
+}
+
+.order-timeline {
+    position: relative;
+    padding: 40px 0;
+    display: flex; /* Aktifkan flexbox pada timeline */
+    flex-direction: column; /* Atur arah flexbox menjadi kolom */
+    align-items: center; /* Pusatkan item secara horizontal */
+}
+
+.order-timeline::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.order-step {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center; /* Pusatkan item secara vertikal */
+}
+
+.step-content {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 800px; /* Lebar tetap untuk box */
+    text-align: center; /* Rata tengah teks di dalam box */
+    position: relative; /* Untuk posisi nomor */
+}
+.step-content p {
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+.step-content h3{
+    font-size: 1.2rem;
+}
+.step-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+/* Portfolio Slider */
+#portfolio {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+    padding: 40px 0; /* Memberi ruang untuk navigasi dan pagination */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide content vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column; /* Mengatur konten slide secara vertikal */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.swiper-slide img {
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #003366; /* Warna tombol navigasi */
+}
+
+/* Section FAQs */
+#faqs {
+    padding: 50px 20px;
+}
+
+#faqs .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#faqs h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: #053565;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fff;
+    padding: 0 15px;
+    color: #333;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+/* FAQ Item Active */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Sesuaikan untuk konten jawaban */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Ubah "+" menjadi "x" */
+}
+
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    h2{
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    }
+
+    .hero-content {
+        margin: 0 20px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+    
+    #about {
+        margin: 0 20px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    .service{
+        margin: 0 20px;
+    }
+    .services h2{
+        padding-bottom: 46px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+
+    .order-timeline::before {
+        left: 50%; /* Posisi garis tetap di tengah */
+    }
+    .order-step {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .step-content {
+        width: 90%; /* Lebar box di mobile */
+        margin: 20px auto; /* Margin otomatis untuk memusatkan */
+    }
+    .step-number {
+        position: relative;
+        top: -10px; /* Posisikan nomor di atas box di mobile */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .step-content h3{
+        font-size: 1.2rem;
+    }
+    .step-content p {
+        font-size: 0.9rem;
+        padding-top: 10px;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+    }
+    .faq-answer{
+        font-size: 0.8rem;
+    }
+
+    #contact form {
+        margin: 0 20px;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+}

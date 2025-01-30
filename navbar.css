@@ -1,0 +1,97 @@
+/* Header dan Navigasi  */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    padding: 10px 0;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav li {
+    margin: 0 15px;
+}
+nav a {
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #053565;
+}
+
+.logo a{
+    margin: 0;
+    padding: 0;
+}
+.logo a img {
+    max-height: 50px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Sembunyikan hamburger di desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger svg {
+    display: block;
+}
+
+
+/* ================= RESPONSIF =================== */
+
+@media (max-width: 768px) {
+    nav .container {
+        display: flex; /* Pastikan fleksibel */
+        flex-direction: row; /* Tetap horizontal */
+        align-items: center; /* Sejajarkan vertikal */
+        justify-content: space-between; /* Pisahkan logo dan hamburger */
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: none; /* Default sembunyikan menu */
+    }
+    nav ul.active { /* Menu ditampilkan */
+        display: flex;
+        position: absolute;
+        top: 100%; /* Tepat di bawah header */
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Transparansi dengan warna putih */
+        backdrop-filter: blur(10px); /* Efek blur */
+        -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+        width: 100%; /* Penuhi lebar layar */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+        z-index: 99;
+        padding-bottom: 20px;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .hamburger {
+        display: block; /* Tampilkan hamburger di mobile */
+    }
+    .logo img {
+        max-height: 40px; /* Atur ukuran logo agar proporsional */
+    }
+}
