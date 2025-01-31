@@ -24,7 +24,7 @@ body {
     line-height: 1.6;
     color: #333;
     background: linear-gradient(to bottom, #fff, #333);
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -151,7 +151,7 @@ img {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     .cta-button {
         font-size: 0.9rem;
         padding: 12px 25px;
@@ -881,20 +881,25 @@ footer {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
  
- 
     .svc-highlight-1{
         display: none;
     }
     .horizontal-line-left-1{
+        width: 80%;
         top: 40px;
         left: 30%;
+        display: none;
     }
     .horizontal-line-left-2{
+        width: 80%;
         top: 340px;
         left: 30%;
+        display: none;
     }
     .horizontal-line-right-1 {
+        width: 80%;
         top: 190px;
         right: 30%;
+        display: none;
     }
  }
