@@ -59,7 +59,7 @@ img {
     background-position: center;
     color: #333;
     text-align: center;
-    padding: 180px 0;
+    padding: 160px 0;
     position: relative; /* Untuk overlay */
 }
 
@@ -159,9 +159,9 @@ img {
     }
 
     .cta-button::after, .cta-button::before {
-        height: 18%;
+        height: 17.5%;
         width: 33.5%;
-        top: 62.3%;
+        top: 62.6%;
         left: 32.5%;
     }
 }
@@ -197,45 +197,6 @@ img {
 .about-item img {
     max-width: 100px;
     margin: 0 auto 20px;
-}
-
-/* Services Section */
-#services {
-    padding: 80px 0;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
-}
-
-.service {
-    background-color: white;
-    padding: 30px; /* Tambahkan padding */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
-}
-
-.service:hover {
-    transform: translateY(-5px); /* Efek melayang */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.service img {
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-
-.service h3{
-    margin-bottom: 15px;
-    text-align: center;
-    color: #003366;
-}
-.service p {
-text-align: justify;
-margin: 0 10px;
 }
 
 /* Contact Section */
@@ -361,12 +322,13 @@ footer {
 
 /* How to Order Section */
 #how-to-order {
-    padding: 80px 0;
+    padding: 0;
+    margin-bottom: 40px;
 }
 
 .order-timeline {
     position: relative;
-    padding: 40px 0;
+    padding: 0;
     display: flex; /* Aktifkan flexbox pada timeline */
     flex-direction: column; /* Atur arah flexbox menjadi kolom */
     align-items: center; /* Pusatkan item secara horizontal */
@@ -420,6 +382,14 @@ footer {
     align-items: center;
     font-size: 1.2em;
     z-index: 1;
+}
+
+.step-content a i{
+    margin-top: 15px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    color: #333;
 }
 
 /* Portfolio Slider */
@@ -562,7 +532,7 @@ footer {
 
 .column h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
 }
@@ -600,8 +570,23 @@ footer {
     margin-bottom: 200px;
 }
 
+/* Responsif iPad/Tab */
+@media (max-width: 1024px) {
+    #hero{
+        margin: 0 30px;
+    }
 
-/* Responsif */
+    #about{
+        margin: 0 30px;
+    }
+
+    .container {
+        margin: 0 30px;
+    }
+}
+
+
+/* Responsif HP */
 @media (max-width: 768px) {
     h2{
         font-size: 1.8rem;
@@ -626,21 +611,10 @@ footer {
     #about {
         margin: 0 20px;
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
     }
     #about p {
         font-size: 0.9rem;
-    }
-
-    .service{
-        margin: 0 20px;
-    }
-    .services h2{
-        padding-bottom: 46px;
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr; /* 1 kolom di mobile */
     }
 
     .order-timeline::before {
@@ -679,7 +653,7 @@ footer {
 
     #contact form {
         margin: 0 auto;
-        width: 90%; /* Pastikan form tetap proporsional */
+        width: 100%; /* Pastikan form tetap proporsional */
     }
 
     #contact p{
@@ -693,22 +667,234 @@ footer {
         margin-top: 30px;
     }
 
+    .column {
+        padding: 5px;
+    }
+
     .column h3 {
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+
+    .h-3{
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
     }
 
     .column ul li {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        text-align: left;
     }
 
     .calendly-inline-widget{
         margin: 0 20px;
         min-width:320px;
         height:500px;
+        margin-bottom: 200px;
     }
 
     .footer {
         font-size: 0.7rem;
     }
 }
+
+
+/* Service Section */
+.container-service {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.section-svc {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.svc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+}
+.svc-1{
+    margin-top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+}
+.svc-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+}
+.svc:hover{
+    transform: translateX(-20px); /* Efek melayang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.svc-1:hover{
+    transform: translateX(20px); /* Efek melayang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.svc-2:hover{
+    transform: translateX(-20px); /* Efek melayang */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.svc-highlight {
+    display: flex;
+    width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    color: transparent;
+}
+.svc-highlight-1 {
+    display: flex;
+    width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    color: transparent;
+}
+.svc i{
+    font-size: 30px;
+    color: #333;
+    padding-right: 20px;
+}
+.svc-1 i{
+    font-size: 30px;
+    color: #333;
+    padding-right: 20px;
+}
+.svc-2 i{
+    font-size: 30px;
+    color: #333;
+    padding-right: 20px;
+}
+
+.order-timeline-svc {
+    position: relative;
+    display: flex; /* Aktifkan flexbox pada timeline */
+    flex-direction: column; /* Atur arah flexbox menjadi kolom */
+    align-items: center; /* Pusatkan item secara horizontal */
+}
+
+
+.horizontal-line-left-1 {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #bebebe, transparent);
+    top: 40px;
+    left: 30%;
+    z-index: -1;
+}
+.horizontal-line-left-2 {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #bebebe, transparent);
+    top: 300px;
+    left: 30%;
+    z-index: -1;
+}
+.horizontal-line-right-1 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#bebebe);
+    top: 170px;
+    right: 30%;
+    z-index: -1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-service {
+        flex-direction: column; /* Change to column on smaller screens */
+        gap: 50px; /* Reduce gap between items */
+    }
+
+    .section-svc{
+        gap: 5px;
+    }
+ 
+    .svc {
+        width: 300px; /* Allow the width to adjust automatically */
+        padding-left: 15px; /* Adjust padding for smaller screens */
+        padding-right: 15px; 
+    }
+    .svc-1 {
+        width: 300px; /* Allow the width to adjust automatically */
+        padding-left: 15px; /* Adjust padding for smaller screens */
+        padding-right: 15px; 
+        margin-top: 20px;
+    }
+    .svc-2 {
+        width: 300px; /* Allow the width to adjust automatically */
+        padding-left: 15px; /* Adjust padding for smaller screens */
+        padding-right: 15px; 
+    }
+    .svc:hover{
+        transform: translateX(-20px); /* Efek melayang */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .svc-1:hover{
+        transform: translateX(-20px); /* Efek melayang */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .svc-2:hover{
+        transform: translateX(20px); /* Efek melayang */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+ 
+ 
+    .svc-highlight-1{
+        display: none;
+    }
+    .horizontal-line-left-1{
+        top: 40px;
+        left: 30%;
+    }
+    .horizontal-line-left-2{
+        top: 340px;
+        left: 30%;
+    }
+    .horizontal-line-right-1 {
+        top: 190px;
+        right: 30%;
+    }
+ }
