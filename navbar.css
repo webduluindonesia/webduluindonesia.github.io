@@ -32,6 +32,35 @@ nav a:hover {
     color: #053565;
 }
 
+.consult-btn {
+    position: relative;
+    background: linear-gradient(to right, #333, #0c72d7);
+    background-size: 200% 100%;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-position 0.5s ease-in-out, color 0.3s ease;
+}
+
+.consult-btn:hover {
+    background-position: right center;
+}
+
+.consult-btn a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.consult-btn a:hover {
+    color: #fff;
+}
+
+
 .logo a{
     margin: 0;
     padding: 0;

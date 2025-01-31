@@ -101,3 +101,23 @@ document.addEventListener("DOMContentLoaded", function () {
     revealOnScroll(); // Run once in case elements are already in view
 });
 
+
+// Ambil elemen tombol dan panah
+const tombol = document.querySelector('.tombol');
+const panah = document.querySelector('.panah');
+
+// Menangani pergerakan kursor pada tombol
+tombol.addEventListener('mousemove', (e) => {
+    // Mendapatkan posisi kursor di dalam tombol
+    const tombolRect = tombol.getBoundingClientRect();
+    const x = e.clientX - tombolRect.left;
+    const y = e.clientY - tombolRect.top;
+
+    // Menempatkan panah di posisi kursor
+    panah.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+});
+
+// Menangani efek saat kursor keluar dari tombol
+tombol.addEventListener('mouseleave', () => {
+    panah.style.opacity = '0'; // Menyembunyikan panah saat kursor keluar
+});
