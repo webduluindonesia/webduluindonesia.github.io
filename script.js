@@ -1,11 +1,13 @@
-// hambburger-menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    hamburger.addEventListener("click", function () {
+        this.classList.toggle("is-active");
+        navMenu.classList.toggle("active");
+    });
 });
+
 
 // swiper portfolio
 const swiper = new Swiper('.swiper', {
@@ -122,3 +124,6 @@ tombol.addEventListener('mouseleave', () => {
     panah.style.opacity = '0'; // Menyembunyikan panah saat kursor keluar
 });
 
+document.querySelector('.hamburger').addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('is-active');
+})

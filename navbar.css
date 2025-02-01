@@ -75,16 +75,127 @@ nav a:hover {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
-    background: none;
-    border: none;
+    padding: 15px;
     cursor: pointer;
-    padding: 10px;
+    display:none;
+    overflow: hidden;
+    background-color: transparent;
 }
 
-.hamburger svg {
-    display: block;
+.hamburger__container {
+    width: 36px;
+    height: 24px;
+    position: relative;
 }
+
+.hamburger__inner,
+.hamburger__inner::before,
+.hamburger__inner::after {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.4s;
+}
+
+.hamburger__inner {
+    top: 50%;
+    transform: translate(5px, -50%);
+    opacity: 1;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    content: "";
+    opacity: 1;
+    transform: translate(-5px, 0);
+}
+
+.hamburger__inner::before {
+    top: -13px;
+}
+
+.hamburger__inner::after {
+    top: 13px;
+}
+
+.hamburger:hover .hamburger__inner {
+    transform: translate(-51px, 50%);
+    opacity: 0;
+}
+
+.hamburger:hover .hamburger__inner::before,
+.hamburger:hover .hamburger__inner::after {
+    transform: translate(102px, 0);
+    opacity: 0;
+}
+
+.hamburger.is-active .hamburger__inner {
+    display: none;
+}
+
+.hamburger__hidden,
+.hamburger__hidden::before,
+.hamburger__hidden::after {
+    width: 100%;
+    height: 2px;
+    background-color: #053565;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.4s;
+}
+
+.hamburger__hidden {
+    opacity: 0;
+    top: 50%;
+    transform: translate(51px, -50%);
+}
+
+.hamburger__hidden::before,
+.hamburger__hidden::after {
+    content: "";
+    transform: translate(102px, 0);
+}
+
+.hamburger__hidden::before {
+    top: -13px;
+}
+
+.hamburger__hidden::after {
+    top: 13px;
+}
+
+.hamburger:hover .hamburger__hidden {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.hamburger:hover .hamburger__hidden::before,
+.hamburger:hover .hamburger__hidden::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.hamburger.is-active .hamburger__hidden {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.hamburger.is-active .hamburger__hidden::before {
+    transform: translate(0, 13px) rotate(90deg);
+    transform-origin: center;
+}
+
+.hamburger.is-active .hamburger__hidden::after {
+    transform-origin: center;
+    transform: translate(0, -13px) rotate(0);
+}
+
 
 /* ================= RESPONSIF =================== */
 
@@ -115,6 +226,20 @@ nav a:hover {
     }
     .hamburger {
         display: block;
+        padding: 10px;
+    }
+    .hamburger__container {
+        width: 30px;
+        height: 20px;
+    }
+    .hamburger__inner, .hamburger__hidden {
+        height: 2px;
+    }
+    .hamburger__inner::before {
+        top: -10px;
+    }
+    .hamburger__inner::after {
+        top: 10px;
     }
     .logo img {
         max-height: 40px;
