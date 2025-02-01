@@ -1,24 +1,27 @@
-/* Header dan Navigasi  */
+/* Header dan Navigasi */
 header {
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 nav {
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    width: 100%;
 }
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 nav li {
     margin: 0 15px;
@@ -26,6 +29,8 @@ nav li {
 nav a {
     font-weight: 500;
     padding: 10px;
+    text-decoration: none;
+    color: #333;
     transition: color 0.3s ease;
 }
 nav a:hover {
@@ -33,16 +38,13 @@ nav a:hover {
 }
 
 .consult-btn {
-    position: relative;
     background: linear-gradient(to right, #333, #0c72d7);
-    background-size: 200% 100%;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    overflow: hidden;
     transition: background-position 0.5s ease-in-out, color 0.3s ease;
 }
 
@@ -53,17 +55,11 @@ nav a:hover {
 .consult-btn a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.consult-btn a:hover {
-    color: #fff;
-}
-
-
-.logo a{
-    margin: 0;
-    padding: 0;
+.logo a {
+    display: flex;
+    align-items: center;
 }
 .logo a img {
     max-height: 50px;
@@ -71,7 +67,7 @@ nav a:hover {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none; /* Sembunyikan hamburger di desktop */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -82,45 +78,37 @@ nav a:hover {
     display: block;
 }
 
-
 /* ================= RESPONSIF =================== */
 
 @media (max-width: 768px) {
     nav .container {
-        display: flex; /* Pastikan fleksibel */
-        flex-direction: row; /* Tetap horizontal */
-        align-items: center; /* Sejajarkan vertikal */
-        justify-content: space-between; /* Pisahkan logo dan hamburger */
-        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
     }
     nav ul {
         flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
         text-align: center;
-        display: none; /* Default sembunyikan menu */
-    }
-    nav ul.active { /* Menu ditampilkan */
-        display: flex;
+        display: none;
         position: absolute;
-        top: 100%; /* Tepat di bawah header */
+        top: 100%;
         left: 0;
-        background-color: rgba(255, 255, 255, 0.8); /* Transparansi dengan warna putih */
-        backdrop-filter: blur(10px); /* Efek blur */
-        -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
-        width: 100%; /* Penuhi lebar layar */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
-        z-index: 99;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         padding-bottom: 20px;
+    }
+    nav ul.active {
+        display: flex;
     }
     nav li {
         margin: 10px 0;
     }
     .hamburger {
-        display: block; /* Tampilkan hamburger di mobile */
+        display: block;
     }
     .logo img {
-        max-height: 40px; /* Atur ukuran logo agar proporsional */
+        max-height: 40px;
     }
 }
