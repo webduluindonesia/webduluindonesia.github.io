@@ -122,9 +122,11 @@ img {
     animation: spin 3s linear infinite;
 }
 
-.cta-button::before {
-    filter: blur(1.1rem);
-    opacity: 0.5;
+.cta-button:hover::after, .cta-button:hover::before {
+    background-image: conic-gradient(from var(--angle), transparent 70%, #ffffff00); /* Warna baru saat hover */
+}
+.cta-button:hover{
+    border: 1px solid #333;
 }
 
 @keyframes spin {
@@ -186,7 +188,7 @@ img {
 /* Contact Section */
 #contact {
     padding: 80px 20px; /* Tambahkan padding agar lebih rapi */
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     text-align: center;
 }
 
@@ -551,7 +553,7 @@ footer {
     min-width:320px;
     height:700px;
     margin: 0;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 /* Responsif iPad/Tab */
@@ -674,10 +676,11 @@ footer {
     }
 
     .calendly-inline-widget{
+        padding: 0 20px;
         margin: 0 20px;
         min-width:320px;
-        height:500px;
-        margin-bottom: 200px;
+        height:600px;
+        margin-bottom: 100px;
     }
 
     .footer {
@@ -887,3 +890,101 @@ footer {
         right: 30%;
     }
  }
+
+
+ .pricing-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+/* Pricing Card Styling */
+.pricing-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    width: 320px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Konten di atas, tombol di bawah */
+    height: 590px; /* Pastikan card memiliki tinggi yang konsisten */
+}
+
+.pricing-card h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.pricing-card .price {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+.pricing-card .price span {
+    font-size: 16px;
+    color: #777;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin: 20px 10px;
+    flex-grow: 1;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.pricing-card ul li i {
+    color: #333;
+    font-size: 16px;
+}
+
+.btn-price {
+    margin-top: auto;
+    background: linear-gradient(to right, #333, #0c72d7);
+    background-size: 200% 100%;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-position 0.5s ease-in-out, color 0.3s ease;
+}
+
+.btn-price:hover {
+    background-position: right center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 90%;
+        height: 520px;
+    }
+}

@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        const offset = 80; // Tambahkan jarak 100px dari atas
+        const offset = 150; // Tambahkan jarak 100px dari atas
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
         window.scrollTo({
@@ -127,3 +127,4 @@ tombol.addEventListener('mouseleave', () => {
 document.querySelector('.hamburger').addEventListener('click', (e) => {
     e.currentTarget.classList.toggle('is-active');
 })
+

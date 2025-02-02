@@ -8,7 +8,7 @@ header {
     width: 100%;
 }
 nav {
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 nav .container {
     display: flex;
@@ -24,11 +24,11 @@ nav ul {
     padding: 0;
 }
 nav li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 nav a {
     font-weight: 500;
-    padding: 10px;
+    padding: 0;
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
@@ -45,7 +45,7 @@ nav a:hover {
     padding: 10px 15px;
     font-size: 16px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
     transition: background-position 0.5s ease-in-out, color 0.3s ease;
